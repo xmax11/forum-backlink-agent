@@ -1,0 +1,38 @@
+# Global settings for the backlink agent.
+
+reply_generation:
+  model: "groq-mixtral-8x7b"
+  temperature: 0.7
+  max_tokens: 300
+  style: "natural"        # natural | formal | concise | friendly
+
+crawler:
+  max_depth: 3
+  max_pages: 50
+  user_agent: "BacklinkAgentBot/1.0"
+
+posting:
+  delay_min_seconds: 10
+  delay_max_seconds: 30
+  randomize_delay: true
+
+email:
+  provider: "mailtm"
+
+captcha:
+  provider: "2captcha"
+  api_key_env: "CAPTCHA_API_KEY"
+
+logging:
+  file: "logs/agent.log"
+  level: "INFO"
+
+safety:
+  avoid_duplicate_posts: true
+  avoid_forbidden_keywords: true
+  forbidden_keywords:
+    - "spam"
+    - "illegal"
+    - "adult"
+    - "gambling"
+    - "crypto scam"

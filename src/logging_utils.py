@@ -1,0 +1,25 @@
+import logging
+import sys
+
+def get_logger():
+    """
+    Returns a shared logger instance for the entire agent.
+    Ensures consistent formatting and avoids duplicate handlers.
+    """
+    logger = logging.getLogger("backlink-agent")
+
+    # Prevent adding multiple handlers if already configured
+    if logger.handlers:
+        return logger
+
+    logger.setLevel(logging.INFO)
+
+    handler = logging.StreamHandler(sys.stdout)
+    formatter = logging.Formatter(
+        "[%(asctime)s] %(levelname)s - %(message)s",
+        datefmt="%Y-%m-%d %H:%M:%S"
+    )
+    handler.setFormatter(formatter)
+
+    logger.addHandler(handler)
+    return logger

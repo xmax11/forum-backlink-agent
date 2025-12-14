@@ -1,0 +1,88 @@
+# Forum configuration for the backlink agent.
+# Each forum entry defines:
+#   - platform: xenforo, phpbb, discourse, vbulletin, mybb, smf, ips, vanilla
+#   - base_url: root URL of the forum
+#   - login_url: login page URL
+#   - signup_url: registration page URL (if auto_signup enabled)
+#   - auto_signup: true/false
+#   - threads: list of thread URLs to post replies to
+
+forum1:
+  platform: xenforo
+  base_url: "https://example-xenforo.com"
+  login_url: "https://example-xenforo.com/login"
+  signup_url: "https://example-xenforo.com/register"
+  auto_signup: true
+  threads:
+    - "https://example-xenforo.com/threads/topic-1"
+    - "https://example-xenforo.com/threads/topic-2"
+
+forum2:
+  platform: phpbb
+  base_url: "https://example-phpbb.com"
+  login_url: "https://example-phpbb.com/ucp.php?mode=login"
+  signup_url: "https://example-phpbb.com/ucp.php?mode=register"
+  auto_signup: true
+  threads:
+    - "https://example-phpbb.com/viewtopic.php?t=123"
+    - "https://example-phpbb.com/viewtopic.php?t=456"
+
+forum3:
+  platform: discourse
+  base_url: "https://example-discourse.com"
+  login_url: "https://example-discourse.com/session"
+  signup_url: "https://example-discourse.com/signup"
+  auto_signup: false
+  threads:
+    - "https://example-discourse.com/t/topic-title/101"
+    - "https://example-discourse.com/t/topic-title/202"
+
+forum4:
+  platform: vbulletin
+  base_url: "https://example-vbulletin.com"
+  login_url: "https://example-vbulletin.com/login.php"
+  signup_url: "https://example-vbulletin.com/register.php"
+  auto_signup: true
+  threads:
+    - "https://example-vbulletin.com/showthread.php?t=555"
+    - "https://example-vbulletin.com/showthread.php?t=777"
+
+forum5:
+  platform: mybb
+  base_url: "https://example-mybb.com"
+  login_url: "https://example-mybb.com/member.php?action=login"
+  signup_url: "https://example-mybb.com/member.php?action=register"
+  auto_signup: true
+  threads:
+    - "https://example-mybb.com/thread-100.html"
+    - "https://example-mybb.com/thread-200.html"
+
+forum6:
+  platform: smf
+  base_url: "https://example-smf.com"
+  login_url: "https://example-smf.com/index.php?action=login"
+  signup_url: "https://example-smf.com/index.php?action=register"
+  auto_signup: true
+  threads:
+    - "https://example-smf.com/index.php?topic=88.0"
+    - "https://example-smf.com/index.php?topic=99.0"
+
+forum7:
+  platform: ips
+  base_url: "https://example-ips.com"
+  login_url: "https://example-ips.com/login"
+  signup_url: "https://example-ips.com/register"
+  auto_signup: false
+  threads:
+    - "https://example-ips.com/topic/300"
+    - "https://example-ips.com/topic/400"
+
+forum8:
+  platform: vanilla
+  base_url: "https://example-vanilla.com"
+  login_url: "https://example-vanilla.com/entry/signin"
+  signup_url: "https://example-vanilla.com/entry/register"
+  auto_signup: true
+  threads:
+    - "https://example-vanilla.com/discussion/10"
+    - "https://example-vanilla.com/discussion/20"

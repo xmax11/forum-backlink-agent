@@ -1,0 +1,26 @@
+# ============================
+# Global Settings for Backlink Agent
+# ============================
+
+# Your main website domain
+domain: "https://printebill.com"
+
+# Brand name used in anchor generation
+brand: "Printebill"
+
+# Limits for each GitHub Action run
+limits:
+  max_backlinks_per_run: 10
+  max_threads_per_forum: 5
+
+# Groq LLM configuration
+groq:
+  model: "llama-3.3-70b-versatile"
+
+# Logging configuration
+logging:
+  # Local JSONL file where backlinks will be stored
+  local_file: "backlinks.jsonl"
+
+  # Google Sheets webhook (leave empty to disable)
+  sheet_webhook: ""
