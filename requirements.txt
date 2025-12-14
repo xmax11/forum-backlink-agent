@@ -1,4 +1,6 @@
-pyyaml
 requests
-playwright
+beautifulsoup4
+pyyaml
+lxml
+
 
