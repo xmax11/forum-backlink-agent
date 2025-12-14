@@ -2,7 +2,7 @@ name: Backlink Agent
 
 on:
   schedule:
-    - cron: "0 * * * *"   # Runs every hour
+    - cron: "0 * * * *"
   workflow_dispatch:
 
 jobs:
@@ -17,11 +17,8 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Random delay (0–3600 seconds)
-        run: |
-          delay=$(( RANDOM % 3600 ))
-          echo "Sleeping for $delay seconds..."
-          sleep $delay
+      - name: Add project to PYTHONPATH
+        run: echo "PYTHONPATH=$PYTHONPATH:$(pwd)" >> $GITHUB_ENV
 
       - name: Set up Python
         uses: actions/setup-python@v5
